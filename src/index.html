@@ -1,19 +1,54 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-    <head>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Bootstrap 4 Starter Pack</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Feature Showcase</title>
+ </head>
 
-    <body>
-        <h1>Bootstrap 4.0.0-beta Starter</h1>
+<body id="home">
+<!-- on medium sized and smaller screens, the collapsible button will become the nav bar instead of links that will be on lagre and xl screens.
+py-4 means that padding is set to 4 on the top, so this will be a thick navbar  --> 
+    <nav class="navbar navbar-expand-md navbar-light fixed-top py-4">
+        <div class="container">
+        <!-- The branding should be on the left hand side, so that means it should be above the button tag.
+        The logo image goes between the opening and closing <a> tags inside an <img> tag -->
+            <a href="index.html" class="navbar-brand"><img src="img/mlogo.png" width="50" height="50" alt="logo"><h3 class="d-inline align-middle">Media Feature</h3></a>
+        <!-- the button is the collapsible toggling button for the navbar that will collapse on medium and smaller sized screen. 
+        Remember that a toggling navbar button requires extra attributes of data-toggle=collapse and data-target=#navbarNav.
+        the class="navbar-toggler-icon" ibside the span tag is the actual icon that is added -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <!-- the data-target="#navbarNav" in the button above, should match the id="navbarNav" in the div below --> 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- class="ml-auto" causes the collapsed navbar to move to the right when it has collapsed.
+                Each <li> is a link in the collapsed navbar, which is a becomes drop-down icon in the collapsed form. If that icon is clicked, the links drop-down -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#authors" class="nav-link">Meet the Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
 
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-    </body>
+        <script src="js/navbar-fixed.js"></script>
+</body>
 </html>
