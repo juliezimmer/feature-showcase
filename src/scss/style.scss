@@ -4,6 +4,9 @@
 //primary color variable
 $primary: #3292a6;
 
+//primary-overlay color variable
+$primary-overlay: rgba(50, 146, 166, 0.8);
+
 //margin-top:105px will push the body of the page down below the navbar
 body {
     margin-top: 105px;
@@ -19,3 +22,46 @@ body {
         padding-right: 20px;
     }
 }
+
+#showcase {
+    position: relative;
+    background:url('../img/mountains.jpg');
+    min-height: 600px;
+
+    .primary-overlay {
+        background: $primary-overlay;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%; 
+        height:100%;
+    }
+}
+
+.info-header {
+    width: 50%;
+    margin:auto;
+    border-bottom:1px #ddd solid;
+}
+//Styling for author's section
+//margin-top: -50px brings the photo of each author over the top of the card 
+#authors {
+    img {
+      margin-top: -50px;  
+    }
+    //changes the font size in the card
+    .fa {
+        font-size:25px;
+    }
+    //card:hover changes the background color of the card to the variable primary color (teal) when the mouse hovers over it
+    .card:hover {
+        background: $primary;
+        color:#fff;
+
+        /* this changes the color of the social media icons to white when the mouse hovers over them or they wouldn't be visible on the teal background */
+        .fa {
+            color: #fff;
+        }
+    } 
+}
+
